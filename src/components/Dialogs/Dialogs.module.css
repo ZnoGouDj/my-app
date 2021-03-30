@@ -1,6 +1,7 @@
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 10fr;
+    margin: 3px;
 }
 
 .dialogsItems {
@@ -13,9 +14,24 @@
 }
 
 .messages {
-    padding: 10px;
+    padding: 30px;
 }
 
 .messages .message {
     color: white;
+}
+
+.messages .message:not(:first-child) {
+    margin: 34px 0;
+}
+
+.senderAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.dialogs a {
+    margin: 10px;
+    padding: 5px;
 }
