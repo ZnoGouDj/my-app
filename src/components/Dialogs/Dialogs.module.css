@@ -17,6 +17,10 @@
     padding: 30px;
 }
 
+.message:nth-child(even) {
+    text-align: right;
+}
+
 .messages .message {
     color: white;
 }
