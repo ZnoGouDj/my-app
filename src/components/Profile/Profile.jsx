@@ -5,14 +5,13 @@ import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './MyPosts/ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
-
     return (
         <div className={s.profileContainer}>
-            <ProfileInfo />
+            <ProfileInfo images={props.images}/>
             <MyPosts posts={props.profilePage.posts}
                 newPostText={props.profilePage.newPostText}
-                updateNewPostText={props.updateNewPostText}
-                addPost={props.addPost} />
+                dispatch={props.dispatch}
+                images={props.images} />
         </div>
     );
 }
