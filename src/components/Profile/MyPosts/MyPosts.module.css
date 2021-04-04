@@ -5,3 +5,27 @@
 .posts {
     margin-top: 10px;
 }
+
+.postsBlock form {
+    display: flex;
+}
+
+.postsBlock textarea {
+    display: inline-block;
+    width: 90%;
+    resize: none;
+}
+
+.postsBlock button {
+    background-color: #500472;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    width: 10%;
+}

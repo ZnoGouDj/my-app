@@ -1,3 +1,17 @@
 .descriptionBlock {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.avatar {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.profileInfoContainer {
+    display: flex;
     padding: 10px;
+
 }

@@ -4,12 +4,12 @@ import s from './ProfileInfo.module.css';
 
 const ProfileInfo = () => {
     return (
-        <div>
-            <div>
-                <img alt="background" src="https://compote.slate.com/images/98079093-8945-48f4-b768-2d23140275f0.jpg?width=1600"></img>
+        <div className={s.profileInfoContainer}>
+            <div className={s.imageContainer}>
+                <img className={s.avatar} alt="background" src="https://pbs.twimg.com/profile_images/783445386375507969/nTv88w7E_400x400.jpg"></img>
             </div>
             <div className={s.descriptionBlock}>
-                ava + description
+                Jordan Peele
             </div>
         </div>
     );

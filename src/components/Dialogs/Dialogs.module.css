@@ -1,41 +1,107 @@
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 10fr;
-    margin: 3px;
 }
 
 .dialogsItems {
-    padding: 10px;
     color: white;
+    border-right: 1px solid #500472
 }
 
-.dialogsItems .active {
-    color: gold;
+.dialogsItems .dialogs {
+    border: 2px solid #79cbb8;
 }
 
-.messages {
-    padding: 30px;
+.dialogsItems .dialogs:hover {
+    border: 2px solid white;
+}
+
+.dialogs .active:first-child {
+    background-color: #500472;
+    border: 2px solid #500472;
+}
+
+.dialogs .active:first-child a {
+    color: #79cbb8;
 }
 
 .message:nth-child(even) {
-    text-align: right;
+    flex-direction: row-reverse;
+}
+
+.message:nth-child(even) div {
+    color: black;
+}
+
+.messages {
+    margin: 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .messages .message {
     color: white;
+    display: inline-flex;
+    margin: 5px 0;
 }
 
-.messages .message:not(:first-child) {
-    margin: 34px 0;
+.dialogImageContainer {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.dialogImage {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+.imageContainer {
+    width: 50px;
+    height: 50px;
 }
 
 .senderAvatar {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: auto;
     border-radius: 50px;
 }
 
 .dialogs a {
     margin: 10px;
     padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.textInput form {
+    display: flex;
+}
+
+.textInput textarea {
+    display: inline-block;
+    width: 90%;
+    resize: none;
+}
+
+.textInput button {
+    background-color: #500472;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    width: 10%;
+}
+
+.dialogsContainer {
+    display: grid;
+    grid-template-rows: 11fr 2fr;
 }

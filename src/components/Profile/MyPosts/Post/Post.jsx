@@ -5,11 +5,17 @@ import s from './Post.module.css';
 const Post = (props) => {
     return (
         <div className={s.item}>
-            <img alt="av" src="http://rackjite.com/wp-content/uploads/c114-KPBreakfast.jpg" />
-                    {props.message}
             <div>
-                <span>{props.likesCount} likes</span>
+            <img alt="av" src="https://pbs.twimg.com/profile_images/783445386375507969/nTv88w7E_400x400.jpg" />
             </div>
+            <div className={s.messageContent}>
+                <div>
+                    {props.message}
+                </div>
+                <div>
+                    <span>{props.likesCount} likes</span>
+                </div>
+            </div>           
         </div>
     );
 }
