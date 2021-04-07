@@ -1,3 +1,7 @@
+import profileReducer from './profile-reducer'
+import dialogsReducer from './dialogs-reducer'
+import sidebarReducer from './sidebar-reducer'
+
 export let store = {
     _state: {
         profilePage: {
@@ -22,6 +26,7 @@ export let store = {
                 { id: 3, name: "jboyboy408@gmail.com" },
                 { id: 4, name: "Владислав Жирков" }
             ],
+            newMessageBody: ""
         },
         imagesCollection: {
             avatars: [
@@ -60,11 +65,11 @@ export let store = {
     },
 
     dispatch(action) {
-        if (action.type === "ADD-POST") {
-           this._addPost();
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-            this._updateNewPostText(action.newText)
-        }
+        this._state.profilePage = profileReducer(this._state.profilePage, action)
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action)
+        this._state.sidebarPage = sidebarReducer(this._state.sidebarPage, action)
+
+        this._callSubscriber(this._state);
     }
 }
 
