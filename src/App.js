@@ -9,15 +9,14 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 
 const App = (props) => {
-
   return (
     <div className="app-wrapper">
       <Header />
       <Navbar />
       <div className="app-wrapper-content">
-        <Route path="/dialogs" render={() => <Dialogs store={props.store} images={props.state.imagesCollection} />} />
+        <Route path="/dialogs" render={() => <Dialogs store={props.store} images={props.state.sidebar} />} />
         <Route path="/profile" render={() => <Profile profilePage={props.state.profilePage}
-                                                      images={props.state.imagesCollection}
+                                                      images={props.state.sidebar}
                                                       dispatch={props.dispatch} />} />
         <Route path="/news" component={News} />
         <Route path="/music" component={Music} />
