@@ -2,13 +2,10 @@ import React from 'react';
 
 import s from './../Navbar.module.css';
 
-const FriendsAvatars = () => {
-
-    let unknownUserLogo = 'https://icon-library.com/images/unknown-person-icon/unknown-person-icon-19.jpg';
-
+const FriendsAvatars = (props) => {
     return (
         <div className={s.friendsAvatar}>
-            <img className={s.avatar} src={unknownUserLogo} alt="logo"/>
+            <img className={s.avatar} src={props.image} alt="logo"/>
         </div>
     )
 }

@@ -6,8 +6,8 @@ import FriendsBar from './FriendsBar/FriendsBar';
 
 
 const Navbar = (props) => {
-    
-    let state = props.store.getState().dialogsPage;
+
+    let state = props.store.getState().sidebar.avatars[1];
 
     return (
         <nav className={s.nav}>
@@ -26,7 +26,7 @@ const Navbar = (props) => {
             <div className={s.item}>
                 <NavLink to="/settings" activeClassName={s.activeLink}>Settings</NavLink>
             </div>
-            <FriendsBar dialogsPage={state}/>
+            <FriendsBar sidebar={state}/>
         </nav>
     );
 }

@@ -4,15 +4,12 @@ import s from './../Navbar.module.css';
 import FriendsAvatars from './../FriendsAvatars/FriendsAvatars';
 
 const FriendsBar = (props) => {
-
-    const image = props.dialogsPage.image;
-
     return (
         <div className={s.friends}>Friends Online
             <div className={s.avatarsContainer}>
-                <FriendsAvatars image={image}/>
-                <FriendsAvatars image={image}/>
-                <FriendsAvatars image={image}/>
+                <FriendsAvatars image={props.sidebar.image}/>
+                <FriendsAvatars image={props.sidebar.image}/>
+                <FriendsAvatars image={props.sidebar.image}/>
             </div>
         </div>
 
