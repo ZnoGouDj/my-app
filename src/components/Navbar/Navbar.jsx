@@ -7,6 +7,8 @@ import FriendsBar from './FriendsBar/FriendsBar';
 
 const Navbar = (props) => {
     
+    let state = props.store.getState().dialogsPage;
+
     return (
         <nav className={s.nav}>
             <div className={s.item}>
@@ -24,7 +26,7 @@ const Navbar = (props) => {
             <div className={s.item}>
                 <NavLink to="/settings" activeClassName={s.activeLink}>Settings</NavLink>
             </div>
-            <FriendsBar />
+            <FriendsBar dialogsPage={state}/>
         </nav>
     );
 }
