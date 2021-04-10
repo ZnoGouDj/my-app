@@ -15,7 +15,8 @@ let initialState = {
         { id: 3, name: "jboyboy408@gmail.com" },
         { id: 4, name: "Владислав Жирков" }
     ],
-    newMessageBody: ""
+    newMessageBody: "",
+    image: 'https://icon-library.com/images/unknown-person-icon/unknown-person-icon-19.jpg'
 }
 
 const dialogsReducer = (state = initialState, action) => {

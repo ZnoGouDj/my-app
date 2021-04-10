@@ -28,7 +28,7 @@ export let store = {
             ],
             newMessageBody: ""
         },
-        imagesCollection: {
+        sidebarPage: {
             avatars: [
                 { id: 1, image: 'https://pbs.twimg.com/profile_images/783445386375507969/nTv88w7E_400x400.jpg' },
                 { id: 2, image: 'https://icon-library.com/images/unknown-person-icon/unknown-person-icon-19.jpg' },

@@ -1,5 +1,5 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_POST = 'ADD_POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
 
 let initialState = {
     posts: [
@@ -7,7 +7,8 @@ let initialState = {
         { id: 2, post: "I LOVE BEING IN CONTINENT!", likesCount: "225" },
         { id: 3, post: "I HAVE WHAT I'M HAVING!", likesCount: "135" },
     ],
-    newPostText: 'it-kamasutra.com'
+    newPostText: 'it-kamasutra.com',
+    image: 'https://pbs.twimg.com/profile_images/783445386375507969/nTv88w7E_400x400.jpg'
 }
 
 const profileReducer = (state = initialState, action) => {
