@@ -4,14 +4,12 @@ import s from './Profile.module.css';
 import MyPostsContainer from './MyPosts/MyPostsContainer';
 import ProfileInfo from './MyPosts/ProfileInfo/ProfileInfo';
 
-const Profile = (props) => {
-
-    let state = props.store.getState().profilePage;
+const Profile = () => {
 
     return (
         <div className={s.profileContainer}>
-            <ProfileInfo image={state.image}/>
-            <MyPostsContainer store={props.store} />
+            <ProfileInfo />
+            <MyPostsContainer />
         </div>
     );
 }
