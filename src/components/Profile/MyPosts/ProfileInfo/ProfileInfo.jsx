@@ -1,25 +1,20 @@
 import React from 'react';
-import StoreContext from '../../../../StoreContext';
 
 import s from './ProfileInfo.module.css';
 
-const ProfileInfo = (props) => {
+const ProfileInfo = () => {
 
-    return <StoreContext.Consumer>
-        {store => {
-            return (
-                <div className={s.profileInfoContainer}>
-                    <div className={s.imageContainer}>
-                        <img className={s.avatar} alt="background" src={store.getState().profilePage.image}></img>
-                    </div>
-                    <div className={s.descriptionBlock}>
-                        Jordan Peele
+    return (
+        <div className={s.profileInfoContainer}>
+            <div className={s.imageContainer}>
+                <img className={s.avatar} alt="background" src='https://pbs.twimg.com/profile_images/783445386375507969/nTv88w7E_400x400.jpg'></img>
             </div>
-                </div>
-            );
-        }
-        }
-    </StoreContext.Consumer>
+            <div className={s.descriptionBlock}>
+                Jordan Peele
+            </div>
+        </div>
+    );
+
 }
 
 export default ProfileInfo;

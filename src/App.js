@@ -8,12 +8,11 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 
-const App = (props) => {
-  // console.log(props.store.getState())
+const App = () => {
   return (
     <div className="app-wrapper">
       <Header />
-      <Navbar store={props.store} />
+      <Navbar />
       <div className="app-wrapper-content">
         <Route path="/dialogs" render={() => <DialogsContainer />} />
         <Route path="/profile" render={() => <Profile />} />
