@@ -2,13 +2,13 @@ import profileReducer from './profile-reducer'
 import dialogsReducer from './dialogs-reducer'
 import sidebarReducer from './sidebar-reducer'
 
-export let store = {
+let store = {
     _state: {
         profilePage: {
             posts: [
-                { id: 1, post: "Not a spoon, not a fork, but something in between.", likesCount: "125" },
-                { id: 2, post: "I LOVE BEING IN CONTINENT!", likesCount: "225" },
-                { id: 3, post: "I HAVE WHAT I'M HAVING!", likesCount: "135" },
+                { id: 1, message: "Not a spoon, not a fork, but something in between.", likesCount: "125" },
+                { id: 2, message: "I LOVE BEING IN CONTINENT!", likesCount: "225" },
+                { id: 3, message: "I HAVE WHAT I'M HAVING!", likesCount: "135" },
             ],
             newPostText: 'it-kamasutra.com'
         },
@@ -49,25 +49,10 @@ export let store = {
         this._callSubscriber = observer;
     },
 
-    _addPost() {
-        let newPost = {
-            id: 5,
-            post: this._state.profilePage.newPostText,
-            likesCount: 0
-        };
-        this._state.profilePage.posts.push(newPost);
-        this._state.profilePage.newPostText = '';
-        this._callSubscriber(this._state);
-    },
-    _updateNewPostText(newText) {
-        this._state.profilePage.newPostText = newText;
-        this._callSubscriber(this._state);
-    },
-
     dispatch(action) {
         this._state.profilePage = profileReducer(this._state.profilePage, action)
         this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action)
-        this._state.sidebarPage = sidebarReducer(this._state.sidebarPage, action)
+        this._state.sidebar = sidebarReducer(this._state.sidebar, action)
 
         this._callSubscriber(this._state);
     }
