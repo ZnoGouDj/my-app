@@ -2,12 +2,16 @@
     padding: 0 10px;
     font-weight: bold;
     font-size: larger;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
 }
 
 .avatar {
     width: 150px;
     height: auto;
     border-radius: 10px;
+    margin: 0 10px;
 }
 
 .profileInfoContainer {
